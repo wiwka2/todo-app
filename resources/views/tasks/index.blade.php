@@ -15,9 +15,15 @@
 @section('title', 'Список задач')
 
 @section('content')
-<form action="{{ route('tasks.create') }}" class="btn">
-    <button type="submit" class="btn btn-new" id="btn-initial-new">Добавить новую задачу</button>
-</form>
+    <form action="{{ url('/') }}" class="home-btn">
+        <button type="submit" class="btn btn-new" id="btn-initial-new">Домой</button>
+    </form>
+
+    <form action="{{ route('tasks.create') }}" class="btn">
+        <button type="submit" class="btn btn-new" id="btn-initial-new">Добавить новую задачу</button>
+    </form>
+
+
 
 @if(isset($tasks) && $tasks->count())
     @foreach ($tasks as $task)
