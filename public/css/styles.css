@@ -1,0 +1,210 @@
+/* Общие стили */
+body {
+    font-family: cursive;
+    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+/* Стили для формы */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 97%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 8px 18px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Стили для списка задач */
+.task {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task:last-child {
+    border-bottom: none;
+}
+
+.task h3 {
+    margin: 0;
+    color: #333;
+}
+
+.task p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.task a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.task a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для сообщений */
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+.task-actions {
+    display: flex;
+    gap: 10px; /* Отступ между кнопками */
+    margin-top: 10px;
+}
+
+.btn {
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 14px;
+    color: #fff; /* Белый текст */
+    display: inline-block; /* Чтобы кнопки были в одной строке */
+}
+
+.btn-new {
+    background-color: #007bff;
+}
+
+.btn-new:hover {
+    background-color: #004997;
+}
+
+.btn-info {
+    background-color: #d7aaed;
+}
+
+.btn-info:hover {
+    background-color: #8c43e4;
+}
+
+.btn-edit {
+    background-color: #e3c38d;
+}
+
+.btn-edit:hover {
+    background-color: #a3823d;
+}
+
+.btn-delete {
+    background-color: #bf5e5e;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+}
+
+.btn-info, .btn-warning, .btn-danger {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #fff; /* Белый текст */
+}
+
+a.btn {
+    text-decoration: none; /* Убираем подчеркивание для ссылок с классом btn */
+    color: #fff; /* Белый текст */
+}
+#checkbox {
+    transform: scale(1.5);
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#btn-initial-new {
+    margin-left: 10px;
+}
+
+.welcome-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.welcome-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.welcome-container p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+#do_before {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+#recurrence {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+}

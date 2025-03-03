@@ -14,6 +14,7 @@ class TaskController extends Controller
     {
         //
         $tasks = Task::all();
+
         return view('tasks.index', compact('tasks'));
     }
 
@@ -35,12 +36,17 @@ class TaskController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'nullable',
+            'do_before' => 'required|date',
+            'recurrence' => 'nullable|in:Ежедневно,Еженедельно,Ежемесячно',
         ]);
         Task::create([
             'title' => $request->title,
             'description' => $request->description,
             'completed' => false, // По умолчанию задача не выполнена
+            'do_before' => $request->do_before,
+            'recurrence' => $request->recurrence,
         ]);
+
         return redirect()->route('tasks.index')->with('success', 'Задача успешно добавлена!');
     }
 
@@ -71,6 +77,7 @@ class TaskController extends Controller
             'title' => 'required|max:255',
             'description' => 'nullable',
             'completed' => 'nullable|boolean',
+            'do_before' => 'required|date',
         ]);
 
         $completed = $request->has('completed') ? 1 : 0;
@@ -79,10 +86,13 @@ class TaskController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'completed' => $completed,
+            'do_before' => $request->do_before,
+            'recurrence' => $request->recurrence,
         ]);
 
         $task->update($request->all());
-        return redirect()->route('tasks.index')->with('success', 'Задача успешно обновлена!');;
+
+        return redirect()->route('tasks.index')->with('success', 'Задача успешно обновлена!');
     }
 
     /**
@@ -92,6 +102,7 @@ class TaskController extends Controller
     {
         //
         $task->delete();
+
         return redirect()->route('tasks.index')->with('success', 'Задача успешно удалена!');
     }
 }
