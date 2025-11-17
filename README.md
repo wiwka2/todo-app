@@ -58,10 +58,3 @@ This Todo App is a simple project built with Laravel. It allows users to perform
 - Visit `http://localhost:8000` in your browser to access the Todo App.
 - Use the interface to add, view, edit, and delete tasks.
 
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
